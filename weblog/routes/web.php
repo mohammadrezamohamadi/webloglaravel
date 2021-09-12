@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('login', [\App\Http\Controllers\AuthController::class, 'showLoginForm'])
+
+Route::get('/', [\App\Http\Controllers\AuthController::class, 'showLoginForm'])
     ->name('auth.form.login');
 
-Route::post('login', [\App\Http\Controllers\AuthController::class, 'login'])
+Route::post('/', [\App\Http\Controllers\AuthController::class, 'login'])
     ->name('auth.login');
 
 Route::get('register', [\App\Http\Controllers\AuthController::class, 'showRegisterForm'])
@@ -46,8 +44,18 @@ Route::post('register', [\App\Http\Controllers\AuthController::class, 'register'
     Route::get('posts/{post}', [\App\Http\Controllers\PostController::class, 'show'])
         ->name('posts.show');
 
+    Route::get('posts/{post}', [\App\Http\Controllers\PostController::class, 'show'])
+    ->name('posts.show');
+
     Route::delete('posts/{post}', [\App\Http\Controllers\PostController::class, 'destroy'])
         ->name('posts.destroy');
+
+    Route::get('posts/{Post}/edit', [\App\Http\Controllers\PostController::class, 'edit'])
+       ->name('posts.edit');
+
+
+    Route::put('posts/{Post}/edit', [\App\Http\Controllers\PostController::class, 'update'])
+       ->name('posts.update');
 
     Route::delete('posts/{post}/force', [\App\Http\Controllers\PostController::class, 'forceDelete'])
         ->name('posts.forceDelete');

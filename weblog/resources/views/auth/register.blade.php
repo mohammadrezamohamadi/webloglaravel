@@ -62,7 +62,7 @@
                     </form>
                 </div>
                 <div class="row">
-                    <p>Have an account? <a href="login">login</a></p>
+                    <p>Have an account? <a href="{{route('auth.form.login')}}">login</a></p>
                 </div>
             </div>
         </div>

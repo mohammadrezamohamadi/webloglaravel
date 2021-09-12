@@ -15,8 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = auth()->user()->posts;
-//        $posts= Post::withTrashed()->get();
+
+        $posts = Post::all();
 
         return view('posts.index')
             ->with('posts', $posts);
@@ -45,16 +45,10 @@ class PostController extends Controller
         $validated = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
             'title' => 'required|min:10',
-            'content' => 'required'
+            'content' => 'required|min:100'
         ]);
 
-        // $task = Task::create($request->all());
         $post = Post::create($validated);
-
-        /*$task = new Task();
-        $task->user_id = $request->get('user_id');
-        $task->title = $request->title;
-        $task->save();*/
 
         return redirect()->route('posts.show', $post);
     }
@@ -78,9 +72,11 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Request $request, Post $post)
     {
-        //
+
+        return view('posts.edit', compact('post'));
+
     }
 
     /**
@@ -90,10 +86,22 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update( Request $request  , $id)
     {
-        //
+
+
+        $post=Post::find($id);
+
+        $post->update([
+            'title'=>$request->input('title'),
+            'content' => $request->content,
+   ]);
+
+
+        return redirect()->route('posts.index')
+            ->with('success','Post updated successfully');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -108,6 +116,8 @@ class PostController extends Controller
         return redirect()
             ->route('posts.index');
     }
+
+
     public function forceDelete($id)
     {
         Post::withTrashed()->find($id)->forceDelete();
@@ -115,6 +125,7 @@ class PostController extends Controller
         return redirect()
             ->route('posts.index');
     }
+
 
     public function restore($id)
     {

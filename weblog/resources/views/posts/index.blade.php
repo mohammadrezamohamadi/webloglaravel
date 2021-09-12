@@ -7,13 +7,20 @@
         @foreach($posts as $post)
             <li>
                 @if($post->deleted_at)
-                    <del><a href="{{ route('posts.show', $post) }}" target="_blank">
+                    <a href="{{ route('posts.show', $post) }}" target="_blank">
                             {{ $post->title }} (owner: {{ $post->user->name }})
-                        </a></del>
+                        </a>
+                    <p>{{$post->create_at}}</p>
+
                 @else
                     <a href="{{ route('posts.show', $post) }}" target="_blank">
                         {{ $post->title }} (owner: {{ $post->user->name }})
                     </a>
+                <hr>
+                    <p>Content: {{ \Illuminate\Support\Str::limit($post->content,20)}}</p>
+                <hr>
+                    <p>Created_at: {{$post->created_at}}</p>
+                    <hr>
                 @endif
             </li>
         @endforeach
