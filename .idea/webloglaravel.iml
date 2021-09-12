@@ -1,7 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/weblog/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/weblog/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/weblog/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/weblog/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/weblog/vendor/symfony/polyfill-iconv" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
