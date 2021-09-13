@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -42,15 +43,22 @@ class PostController extends Controller
      */
     public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
+
+
         $validated = $request->validate([
-            'user_id' => 'required|integer|exists:users,id',
+
             'title' => 'required|min:10',
-            'content' => 'required|min:100'
+           'content' => 'required|min:100'
+        ]);
+//         Auth::id();
+//        $post = Post::create($validated);
+      $post= Post::create([
+            'title'=>$validated['title'],
+            'user_id'=>auth()->user()->id,
+            'content'=>$validated['content']
         ]);
 
-        $post = Post::create($validated);
-
-        return redirect()->route('posts.show', $post);
+        return redirect()->route('posts.show',compact('post'))->with('success',' Your Post added successfully');
     }
 
     /**
@@ -72,10 +80,21 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Post $post)
+    public function edit(Request $request, $id)
     {
 
-        return view('posts.edit', compact('post'));
+$post=Post::find($id);
+//       $validated = $request->validate([
+//           'title' =>'required|min:10',
+//           'content' =>'required|min:100'
+//       ]);
+
+          if (Auth::id()!=$post->user->id)
+            abort('403');
+
+//          $post = Post::update($validated);
+
+          return view('posts.edit', compact('post'));
 
     }
 
@@ -88,18 +107,24 @@ class PostController extends Controller
      */
     public function update( Request $request  , $id)
     {
-
-
         $post=Post::find($id);
 
-        $post->update([
-            'title'=>$request->input('title'),
-            'content' => $request->content,
-   ]);
+        $validated = $request->validate([
+
+            'title' => 'required|min:10',
+            'content' => 'required|min:100'
+        ]);
 
 
-        return redirect()->route('posts.index')
-            ->with('success','Post updated successfully');
+
+      $post->update([
+           'title'=>$validated['title'],
+           'content' => $validated['content']
+  ]);
+
+
+       return redirect()->route('posts.index')
+           ->with('success','Post updated successfully');
     }
 
 
@@ -111,6 +136,13 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
+
+      $post= Post::find($id);
+
+
+        if (Auth::id()!=$post->user->id)
+            abort('403');
+
         Post::find($id)->delete();
 
         return redirect()
@@ -120,6 +152,7 @@ class PostController extends Controller
 
     public function forceDelete($id)
     {
+
         Post::withTrashed()->find($id)->forceDelete();
 
         return redirect()

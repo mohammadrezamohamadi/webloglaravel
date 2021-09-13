@@ -54,7 +54,7 @@ Route::post('register', [\App\Http\Controllers\AuthController::class, 'register'
        ->name('posts.edit');
 
 
-    Route::put('posts/{Post}/edit', [\App\Http\Controllers\PostController::class, 'update'])
+   Route::put('posts/{Post}/edit', [\App\Http\Controllers\PostController::class, 'update'])
        ->name('posts.update');
 
     Route::delete('posts/{post}/force', [\App\Http\Controllers\PostController::class, 'forceDelete'])
