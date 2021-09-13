@@ -16,15 +16,7 @@
     <form class="mt-4" method="post" action="{{ route('posts.store') }}">
         @csrf
 
-        <div class="mb-3">
-            <label for="exampleInputUsers1" class="form-label">User</label>
 
-            <select id="exampleInputUsers1" class="form-select" name="user_id">
-                @foreach($users as $user)
-                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-            </select>
-        </div>
 
         <div class="mb-3">
             <label for="exampleInputTitle1" class="form-label">Title</label>

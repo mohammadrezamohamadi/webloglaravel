@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <div class="container">
         <div class="row">
@@ -23,7 +32,7 @@
                             </div>
                             <div class="control-group col-12 mt-2">
                                 <label for="content">Post Content</label>
-                                <textarea id="body" class="form-control" name="content" placeholder="Enter Post Body"
+                                <textarea id="content" class="form-control" name="content" placeholder="Enter Post Body"
                                           rows="5"  >{{ $post->content }}</textarea>
 
                             </div>
